@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blink icon with jQuery &amp; Twitter Bootstrap</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <script>
+function blink()
+{
+  $('.blink').delay(100).fadeTo(100,0.5).delay(100).fadeTo(100,1, blink);
+}
+$(function(){
+  blink();
+});
+    </script>
+  </head>
+ 
+  <body>
+    <div class="container">
+      <h1>Blink icon with jQuery &amp; Twitter Bootstrap</h1>
+      <table class="table table-bordered" style="width: auto">
+        <thead>
+          <tr>
+            <th class="span2">Not blinking</th>
+            <th class="span2">Blinking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><button><i class="icon-envelope"></i></button></td>
+            <td><button><i class="icon-envelope blink"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
